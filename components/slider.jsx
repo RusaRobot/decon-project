@@ -52,7 +52,7 @@ const UISlider = (props) => {
     prevArrow: <PrevArrow />,
     appendDots: (dots) => (
       <div className="w-100">
-        <ul className="list-unstyled d-flex flex-row justify-content-center align-items-center mb-5">
+        <ul className="list-unstyled flex-row justify-content-center align-items-center mb-5">
           {dots}
         </ul>
       </div>
@@ -66,8 +66,8 @@ const UISlider = (props) => {
         active={slideIndex === activeSlideIndex}
         className={
           slideIndex === activeSlideIndex
-            ? "w-[10px] h-[10px] border-[3px] border-[#FFDC12] bg-[#FFDC12] bg-transparent bg rounded-full my-0 mx-[5px]"
-            : "w-[10px] h-[10px] border-[3px] border-[#F0F3F7] bg-[#F0F3F7] bg-transparent rounded-full my-0 mx-[5px]"
+            ? "w-[6px] h-[6px] border-[3px] border-[#FFDC12] bg-[#FFDC12] bg-transparent bg rounded-full my-0 mx-[5px]"
+            : "w-[6px] h-[6px] border-[3px] border-[#F0F3F7] bg-[#F0F3F7] bg-transparent rounded-full my-0 mx-[5px]"
         }
       ></div>
     ),
