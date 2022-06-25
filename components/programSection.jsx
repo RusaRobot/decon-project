@@ -2,10 +2,13 @@ import { Text } from "@chakra-ui/react";
 import ButtonCustom from "./buttonCustom";
 import UISlider from "./slider";
 
-const ProgramSection = () => {
+const ProgramSection = ({ programRef }) => {
   return (
     <>
-      <div className="flex-row w-full h-120% bg-[#202020] pb-[74px]">
+      <div
+        ref={programRef}
+        className="flex-row w-full h-120% bg-[#202020] pb-[74px]"
+      >
         <Text
           bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
           bgClip="text"
@@ -105,7 +108,9 @@ const ProgramSection = () => {
                 </p>
               </div>
               <div className="mt-12">
-                <ButtonCustom text="Register Now" w="193px" h="43px" />
+                <div className="hover:scale-110 duration-500">
+                  <ButtonCustom text="Register Now" w="193px" h="43px" />
+                </div>
               </div>
             </div>
           </div>

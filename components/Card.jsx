@@ -1,6 +1,5 @@
 import { Box } from "@chakra-ui/react";
 import Slider from "react-slick";
-import styles from "./card.module.css";
 
 const cardData = [
   {

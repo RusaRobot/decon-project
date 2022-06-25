@@ -1,10 +1,13 @@
 import Card from "./Card";
 import { Text } from "@chakra-ui/react";
 
-const ActivitySection = () => {
+const ActivitySection = ({ activityRef }) => {
   return (
     <>
-      <div className="flex-row w-full h-120% bg-[#333533] pb-[132px]">
+      <div
+        ref={activityRef}
+        className="flex-row w-full h-120% bg-[#333533] pb-[132px]"
+      >
         <Text
           bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
           bgClip="text"
