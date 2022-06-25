@@ -1,16 +1,8 @@
 import React from "react";
-// import styled from "styled-components";
 import { useState } from "react";
 import Slider from "react-slick";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
-// const Dot = styled.div`
-//   width: 15px;
-//   height: 15px;
-//   border: solid 3px #2c2c2c;
-//   background-color: transparent;
-//   border-radius: 100%;
-//   margin: 0px 5px;
-// `;
+
 const UISlider = (props) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   console.log(activeSlideIndex);

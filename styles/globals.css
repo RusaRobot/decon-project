@@ -2,32 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.slick-dots {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-  padding: 1rem 0;
+.card .slick-slide {
+  margin: 0 26px;
+}
 
-  list-style-type: none;
-
-  li {
-    margin: 0 0.25rem;
-  }
-
-  button {
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    padding: 0;
-
-    border: none;
-    border-radius: 100%;
-    background-color: orange;
-
-    text-indent: -9999px;
-  }
-
-  li.slick-active button {
-    background-color: red;
-  }
+.card .slick-list {
+  margin-left: -26px; /* px size of slide space */
+  width: calc(100% + 20px); /* add double the px size of slide space */
 }
