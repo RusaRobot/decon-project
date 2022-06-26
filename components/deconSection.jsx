@@ -1,14 +1,15 @@
 import ButtonCustom from "./buttonCustom";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-} from "@chakra-ui/react";
 import Link from "next/link";
+import {
+  useAddress,
+  useMetamask,
+  useNetworkMismatch,
+  ChainId,
+  useNetwork,
+  useEditionDrop,
+  useNFTBalance,
+} from "@thirdweb-dev/react";
+import { useState } from "react";
 
 const DeconSection = ({
   storyFunction,
@@ -17,8 +18,79 @@ const DeconSection = ({
   nftFunction,
   roadmapFunction,
 }) => {
-  //Connect Wallet
-  const connectWallet = () => {};
+  // allow user to connect to app with metamask, and obtain address
+  const address = useAddress();
+  const connectWithMetamask = useMetamask();
+  const networkMismatched = useNetworkMismatch();
+  const [, switchNetwork] = useNetwork(); // Switch network
+
+  // Replace this address with your NFT Drop address!
+  const editionDrop = useEditionDrop(
+    "0xCFAc3aE7CcA862473E7Fbcbe091d3aA7dfadcC3E"
+  );
+  const [isClaiming, setIsClaiming] = useState(false);
+  const { data: balance, isLoading } = useNFTBalance(editionDrop, address, "0");
+
+  const mintNft = async () => {
+    try {
+      // If they don't have an connected wallet, ask them to connect!
+      if (!address) {
+        await connectWithMetamask();
+        return;
+      }
+
+      // Ensure they're on the right network (mumbai)
+      if (networkMismatched) {
+        await switchNetwork(ChainId.Polygon);
+        return;
+      }
+
+      setIsClaiming(true);
+      await editionDrop.claim(0, 1);
+    } catch (error) {
+      console.error("Failed to mint NFT", error);
+    } finally {
+      setIsClaiming(false);
+    }
+  };
+
+  //Truncate Address
+  function truncateAddress(address) {
+    return `${address.slice(0, 6)}...${address.slice(-5)}`;
+  }
+
+  //Loading
+  // if (isLoading) {
+  //   return (
+  //     <div>
+  //       <h1>Ngintip wallet dulu...</h1>
+  //     </div>
+  //   );
+  // }
+
+  // if the user is connected and has an NFT from the drop, display text
+  if (balance > 0) {
+    return (
+      <div>
+        <h2>Yes, kamu adalah anggota DECONNNN!!! 🟦🔺🟣</h2>
+      </div>
+    );
+  }
+
+  if (balance <= 0) {
+    return (
+      <div>
+        <h2>
+          Sorry bos gabisa, bkn tmen gw <span>{truncateAddress(address)}</span>
+        </h2>
+        <div>
+          <button disabled={isClaiming} onClick={mintNft}>
+            {isClaiming ? "Gabisa beli deng..." : "Jajan Dulu"}
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="h-[735px] w-full text-white relative">
@@ -58,7 +130,10 @@ const DeconSection = ({
         >
           Roadmap
         </button>
-        <div className="hover:scale-110 duration-500">
+        <div
+          onClick={connectWithMetamask}
+          className="hover:scale-110 duration-500"
+        >
           <ButtonCustom
             text="Connect Wallet"
             w="193px"
