@@ -1,4 +1,5 @@
 import ActivitySection from "../components/activitySection";
+import NFTSection from "../components/NFTSection";
 import ProgramSection from "../components/programSection";
 import { useRef } from "react";
 import DeconSection from "../components/deconSection";
@@ -37,10 +38,14 @@ export default function Home() {
         activityFunction={() => {
           scrollToElement(activity);
         }}
+        nftFunction={() => {
+          scrollToElement(nft);
+        }}
       />
       <StorySection storyRef={story} />
       <ProgramSection programRef={program} />
       <ActivitySection activityRef={activity} />
+      <NFTSection nftRef={nft} />
       <RoadmapSection roadmapRef={roadmap} />
       <FormSection />
       <FooterSection />
