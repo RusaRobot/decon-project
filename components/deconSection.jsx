@@ -9,6 +9,13 @@ import {
   useEditionDrop,
   useNFTBalance,
 } from "@thirdweb-dev/react";
+import {
+  Alert,
+  AlertIcon,
+  AlertTitle,
+  AlertDescription,
+} from "@chakra-ui/react";
+import { useToast } from "@chakra-ui/react";
 import { useState } from "react";
 
 const DeconSection = ({
@@ -18,6 +25,9 @@ const DeconSection = ({
   nftFunction,
   roadmapFunction,
 }) => {
+  //Toast
+  const toast = useToast();
+
   // allow user to connect to app with metamask, and obtain address
   const address = useAddress();
   const connectWithMetamask = useMetamask();
@@ -59,15 +69,6 @@ const DeconSection = ({
     return `${address.slice(0, 6)}...${address.slice(-5)}`;
   }
 
-  //Loading
-  // if (isLoading) {
-  //   return (
-  //     <div>
-  //       <h1>Ngintip wallet dulu...</h1>
-  //     </div>
-  //   );
-  // }
-
   // if the user is connected and has an NFT from the drop, display text
   if (balance > 0) {
     return (
@@ -77,20 +78,20 @@ const DeconSection = ({
     );
   }
 
-  if (balance <= 0) {
-    return (
-      <div>
-        <h2>
-          Sorry bos gabisa, bkn tmen gw <span>{truncateAddress(address)}</span>
-        </h2>
-        <div>
-          <button disabled={isClaiming} onClick={mintNft}>
-            {isClaiming ? "Gabisa beli deng..." : "Jajan Dulu"}
-          </button>
-        </div>
-      </div>
-    );
-  }
+  // if (balance <= 0) {
+  //   return (
+  //     <div>
+  //       <h2>
+  //         Sorry bos gabisa, bkn tmen gw <span>{truncateAddress(address)}</span>
+  //       </h2>
+  //       <div>
+  //         <button disabled={isClaiming} onClick={mintNft}>
+  //           {isClaiming ? "Gabisa beli deng..." : "Jajan Dulu"}
+  //         </button>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="h-[735px] w-full text-white relative">
@@ -134,13 +135,7 @@ const DeconSection = ({
           onClick={connectWithMetamask}
           className="hover:scale-110 duration-500"
         >
-          <ButtonCustom
-            text="Connect Wallet"
-            w="193px"
-            h="43px"
-            onClick={""}
-            size="20px"
-          />
+          <ButtonCustom text="Connect Wallet" w="193px" h="43px" size="20px" />
         </div>
       </div>
       <div className="absolute w-[1349px] h-fit top-0 right-0 left-0">
@@ -162,15 +157,30 @@ const DeconSection = ({
       </div>
       <div className="flex justify-center relative pt-10">
         <div className="hover:scale-110 duration-500">
-          <ButtonCustom
-            text="Connect Wallet"
-            w="328px"
-            h="76px"
-            onClick={""}
-            size="32px"
-          />
+          <ButtonCustom text="Connect Wallet" w="328px" h="76px" size="32px" />
         </div>
       </div>
+      {balance <= 0
+        ? toast({
+            title: "Gabisa",
+            description: (
+              <div>
+                <h2>
+                  Sorry bos gabisa, bkn tmen gw{" "}
+                  <span>{truncateAddress(address)}</span>
+                </h2>
+                <div>
+                  <button disabled={isClaiming} onClick={mintNft}>
+                    {isClaiming ? "Gabisa beli deng..." : "Jajan Dulu"}
+                  </button>
+                </div>
+              </div>
+            ),
+            status: "error",
+            duration: 9000,
+            isClosable: true,
+          })
+        : null}
     </div>
   );
 };
