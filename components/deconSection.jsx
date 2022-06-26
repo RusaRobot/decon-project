@@ -1,4 +1,14 @@
 import ButtonCustom from "./buttonCustom";
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from "@chakra-ui/react";
+import Link from "next/link";
 
 const DeconSection = ({
   storyFunction,
@@ -13,9 +23,11 @@ const DeconSection = ({
   return (
     <div className="h-[735px] w-full text-white relative">
       <div className="flex z-10 py-10 px-14 justify-between items-center absolute top-0 right-0 left-0 text-[20px]">
-        <div className="w-[110px] h-[46px]">
-          <img className="w-full h-full" src="./DECON.svg" alt="" />
-        </div>
+        <Link href="/">
+          <div className="w-[110px] h-[46px] hover:cursor-pointer">
+            <img className="w-full h-full" src="./DECON.svg" alt="" />
+          </div>
+        </Link>
         <button
           onClick={storyFunction}
           className="hover:text-[#FFD100] hover:scale-110 duration-500"
