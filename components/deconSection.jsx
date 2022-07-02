@@ -138,7 +138,7 @@ const DeconSection = ({
           <ButtonCustom text="Connect Wallet" w="193px" h="43px" size="20px" />
         </div>
       </div>
-      <div className="absolute w-[1349px] h-fit top-0 right-0 left-0">
+      <div className="absolute w-full h-fit top-0 right-0 left-0">
         <img
           className="w-full object-cover bg-[#1b1a1a]"
           src="./NASA.svg"
