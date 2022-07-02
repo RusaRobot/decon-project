@@ -84,6 +84,21 @@ const DeconSection = ({
     );
   }
 
+  const modalKebuka = async () => {
+    try {
+      await connectWithMetamask();
+
+      if (balance > 0) {
+        onOpen();
+      }
+      if (balance <= 0) {
+        onOpen();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   // if (balance <= 0) {
   //   return (
   //     <div>
@@ -113,7 +128,7 @@ const DeconSection = ({
         >
           Story
         </button>
-        <Button onClick={onOpen}>Modal</Button>
+
         <button
           onClick={programFunction}
           className="hover:text-[#FFD100] hover:scale-110 duration-500"
@@ -139,7 +154,7 @@ const DeconSection = ({
           Roadmap
         </button>
         <div
-          onClick={connectWithMetamask}
+          onClick={() => modalKebuka()}
           className="hover:scale-110 duration-500"
         >
           <ButtonCustom text="Connect Wallet" w="193px" h="43px" size="20px" />
@@ -167,7 +182,7 @@ const DeconSection = ({
           <ButtonCustom text="Connect Wallet" w="328px" h="76px" size="32px" />
         </div>
       </div>
-      {balance <= 0
+      {/* {balance <= 0
         ? toast({
             title: "Gabisa",
             description: (
@@ -187,8 +202,8 @@ const DeconSection = ({
             duration: 9000,
             isClosable: true,
           })
-        : null}
-      <ModalLandingPage isOpen={isOpen} onClose={onClose} />
+        : null} */}
+      <ModalLandingPage isOpen={isOpen} onClose={onClose} balance={balance} />
     </div>
   );
 };
