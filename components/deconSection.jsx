@@ -14,9 +14,12 @@ import {
   AlertIcon,
   AlertTitle,
   AlertDescription,
+  useDisclosure,
+  Button,
 } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
 import { useState } from "react";
+import ModalLandingPage from "./ModalLandingPage";
 
 const DeconSection = ({
   storyFunction,
@@ -25,6 +28,9 @@ const DeconSection = ({
   nftFunction,
   roadmapFunction,
 }) => {
+  //Modal
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   //Toast
   const toast = useToast();
 
@@ -107,6 +113,7 @@ const DeconSection = ({
         >
           Story
         </button>
+        <Button onClick={onOpen}>Modal</Button>
         <button
           onClick={programFunction}
           className="hover:text-[#FFD100] hover:scale-110 duration-500"
@@ -181,6 +188,7 @@ const DeconSection = ({
             isClosable: true,
           })
         : null}
+      <ModalLandingPage isOpen={isOpen} onClose={onClose} />
     </div>
   );
 };

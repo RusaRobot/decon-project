@@ -62,7 +62,7 @@ const Card = () => {
   return (
     <div>
       <Slider {...settings}>
-        {cardData.map((val) => {
+        {cardData.map((val, i) => {
           return (
             <Box
               rounded="lg"
@@ -72,6 +72,7 @@ const Card = () => {
               bg="#202020"
               w="530px"
               h="544px"
+              key={i}
             >
               <Box bg="gray.300" height="320px">
                 {/* <img

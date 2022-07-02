@@ -31,7 +31,7 @@ const GetNFT = () => {
               <div className="flex flex-col text-[#D6D6D6]">
                 <div className="text-[32px]">Transfer</div>
                 <div className="text-[16px]">
-                  Transfer BUSD / IDR to Decon's Wallet or Bank Account
+                  Transfer BUSD / IDR to Decon&apos;s Wallet or Bank Account
                 </div>
               </div>
             </div>
@@ -60,7 +60,7 @@ const GetNFT = () => {
                 <div className="text-[32px]">Wallet Confirmation</div>
                 <div className="text-[16px]">
                   Confirm wallet to receive NFT (We will give the tutorial for
-                  those who doesn't have a wallet)
+                  those who doesn&apos;t have a wallet)
                 </div>
               </div>
             </div>
