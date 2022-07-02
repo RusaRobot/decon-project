@@ -5,7 +5,7 @@ const RoadmapSection = ({ roadmapRef }) => {
   return (
     <div
       ref={roadmapRef}
-      className="w-[1349px] h-[626px] bg-gradient-to-t from-[#212121] to-[#333533] flex flex-col"
+      className="w-full h-[626px] bg-gradient-to-t from-[#212121] to-[#333533] flex flex-col"
     >
       <div className="flex justify-center mt-20">
         <Text

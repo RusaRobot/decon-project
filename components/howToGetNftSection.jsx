@@ -2,7 +2,7 @@ import { Text } from "@chakra-ui/react";
 
 const GetNFT = () => {
   return (
-    <div className="w-[1349px] h-[1098px] bg-gradient-to-t from-[#212121] to-[#333533]">
+    <div className="w-full h-[1098px] bg-gradient-to-t from-[#212121] to-[#333533]">
       <div className="flex justify-center mt-[60px]">
         <div>
           <Text

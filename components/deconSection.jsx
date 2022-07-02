@@ -100,7 +100,7 @@ const DeconSection = ({
   // }
 
   return (
-    <div className="h-[735px] w-full text-white relative">
+    <div className="h-[588px] w-full text-white relative">
       <div className="flex z-10 py-10 px-14 justify-between items-center absolute top-0 right-0 left-0 text-[20px]">
         <Link href="/">
           <div className="w-[110px] h-[46px] hover:cursor-pointer">

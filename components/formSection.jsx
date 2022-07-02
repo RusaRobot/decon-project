@@ -44,8 +44,8 @@ const FormSection = () => {
   };
 
   return (
-    <div className="w-[1349px] h-[626px] bg-[#333533] flex flex-col">
-      <div className="mx-36 flex justify-center w-[1060px] h-[453px] bg-[#202020] mt-20 px-10 py-14 rounded-3xl">
+    <div className="w-full h-[626px] bg-[#333533] flex flex-col">
+      <div className="mx-auto flex justify-center w-[1060px] h-[453px] bg-[#202020] mt-20 px-10 py-14 rounded-3xl">
         <div className="text-white">
           <div className="text-[60px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD100] to-[#D6D6D6]">
             Interested with our 2nd NFT?

@@ -2,11 +2,8 @@ import { Text } from "@chakra-ui/react";
 
 const StorySection = ({ storyRef }) => {
   return (
-    <div
-      ref={storyRef}
-      className="w-[1349px] h-[888px] bg-gradient-to-b from-[#202020] to-[#333533] flex flex-col text-white"
-    >
-      <div className="font-bold ml-28 mt-16">
+    <div className="w-full h-[1000px] 2xl:h-[1300px] bg-gradient-to-b from-[#202020] to-[#333533] flex flex-col text-white pt-36 2xl:pt-96">
+      <div className="font-bold ml-28 mt-16 2xl:mt-32" ref={storyRef}>
         <Text
           bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
           bgClip="text"
