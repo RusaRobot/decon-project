@@ -9,7 +9,7 @@ const NFTSection = ({ nftRef, hiddenProp }) => {
         ref={nftRef}
         className="flex-row w-full h-120% bg-[#202020] pb-[84px] pt-[80px]"
       >
-        <div className="flex justify-between mx-[91px]">
+        <div className="flex justify-between mx-auto gap-[32px] w-fit">
           <div className="w-[514px] h-[796px]">
             <img src="./Decon.png" alt="Decon" />
           </div>

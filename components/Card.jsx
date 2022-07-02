@@ -3,7 +3,7 @@ import Slider from "react-slick";
 
 const cardData = [
   {
-    image: "",
+    image: "/DeconBlockchainDeFi.jpg",
     alt: "",
     title: "Activity 1",
     description: `[Course Description] Providing education and literacy is
@@ -13,7 +13,7 @@ const cardData = [
   web3 ahead`,
   },
   {
-    image: "",
+    image: "/DeconCourse1.jpg",
     alt: "",
     title: "Activity 2",
     description: `[Course Description] Providing education and literacy is
@@ -23,7 +23,7 @@ const cardData = [
   web3 ahead`,
   },
   {
-    image: "",
+    image: "/DeconCourse2.jpg",
     alt: "",
     title: "Activity 3",
     description: `[Course Description] Providing education and literacy is
@@ -33,7 +33,7 @@ const cardData = [
   web3 ahead`,
   },
   {
-    image: "",
+    image: "/DeconCourse3.jpg",
     alt: "",
     title: "Activity 4",
     description: `[Course Description] Providing education and literacy is
@@ -42,54 +42,114 @@ const cardData = [
   literacy will guide people to conquer the
   web3 ahead`,
   },
+  {
+    image: "DeconVol2.jpg",
+    alt: "",
+    title: "Activity 5",
+    description: `[Course Description] Providing education and literacy is
+  essential as people pay more attention to
+  technologies. A reasonable basis of
+  literacy will guide people to conquer the
+  web3 ahead`,
+  },
 ];
+
+const cardDataCarousel = ({ description }) => {
+  return (
+    <div className="rounded-lg overflow-hidden bg-[#202020] w-[530px] h-[544px]">
+      <div className="bg-gray-300 h-[222px]"></div>
+      <div className="">
+        <p className="text-yellowPrimary font-bold text-[32px]">{val.title}</p>
+        <p className="text-[#D6D6D6] mt-2">{val.description}</p>
+      </div>
+    </div>
+  );
+};
 
 const Card = () => {
   var settings = {
-    arrows: false,
     dots: false,
     infinite: true,
-    rows: 1,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
+    autoplay: false,
+    autoplaySpeed: 2000,
     pauseOnHover: true,
-    centerMode: false,
-    className: "card",
-    adaptiveHeight: true,
+    centerMode: true,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 1920,
+        settings: {
+          dots: false,
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+          centerMode: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1500,
+        settings: {
+          dots: false,
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+          centerMode: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1280,
+        settings: {
+          dots: false,
+          infinite: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          autoplay: false,
+          autoplaySpeed: 2000,
+          pauseOnHover: true,
+          centerMode: true,
+          arrows: false,
+        },
+      },
+    ],
   };
   return (
     <div>
       <Slider {...settings}>
         {cardData.map((val, i) => {
           return (
-            <Box
-              rounded="lg"
-              borderWidth=""
-              borderRadius="xl"
-              overflow="hidden"
-              bg="#202020"
-              w="530px"
-              h="544px"
-              key={i}
-            >
-              <Box bg="gray.300" height="320px">
-                {/* <img
-            src={val.image}
-            alt={val.alt}
-            className="object-cover h-[320px] w-[530px]"
-          /> */}
-              </Box>
-              <Box p="6">
-                <p className="text-yellowPrimary font-bold text-[32px]">
-                  {val.title}
-                </p>
-                <p className="text-[#D6D6D6] mt-2">{val.description}</p>
-              </Box>
-            </Box>
+            <div className="" key={i}>
+              <div className="rounded-xl overflow-hidden bg-[#202020] w-[480px] h-[1060px]">
+                <div className="bg[#142247] container h-[850px] overflow-hidden flex">
+                  <img
+                    src={val.image}
+                    alt={val.alt}
+                    className="object-cover mx-auto"
+                  />
+                </div>
+                <div className="p-6">
+                  <p className="text-yellowPrimary font-bold text-[32px]">
+                    {val.title}
+                  </p>
+                  <p className="text-[#D6D6D6] mt-2">{val.description}</p>
+                </div>
+              </div>
+            </div>
           );
         })}
+
+        {/* <div className="">2</div>
+        <div className="">3</div>
+        <div className="">4</div> */}
       </Slider>
     </div>
   );

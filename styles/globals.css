@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.card .slick-slide {
+/*.card .slick-slide {
   margin: 0 26px;
 }
 
 .card .slick-list {
   margin-left: -26px; /* px size of slide space */
-  width: calc(100% + 20px); /* add double the px size of slide space */
-}
+/*  width: calc(100% + 20px); /* add double the px size of slide space } */
