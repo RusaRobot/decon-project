@@ -19,15 +19,15 @@ const StorySection = ({ storyRef }) => {
         </Text>
       </div>
       <div className="ml-28 mt-8 w-[650px] text-justify text-[16px] text-[#D6D6D6]">
-        An innovation-based economy will be the primary driver of Indonesia's
-        economic progress. FEBUI alumni must have a strategic role and actively
-        synergize with various alumni from the stakeholders such as the
-        Government, investors, professionals, educational institutions, talents,
-        and the media.
+        An innovation-based economy will be the primary driver of
+        Indonesia&apos;s economic progress. FEBUI alumni must have a strategic
+        role and actively synergize with various alumni from the stakeholders
+        such as the Government, investors, professionals, educational
+        institutions, talents, and the media.
       </div>
       <div className="ml-28 mt-4 w-[650px] text-justify text-[16px] text-[#D6D6D6]">
         DECON (Digital & New Economy) is a community by FEBUI alumni that has
-        the initiative to advance Indonesia's innovation economy ecosystem
+        the initiative to advance Indonesia&apos;s innovation economy ecosystem
         through education and talent development programs, strengthening
         professional networks, and collective business development activities
         relevant to the times.
