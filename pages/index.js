@@ -7,6 +7,7 @@ import StorySection from "../components/storySection";
 import RoadmapSection from "../components/roadmapSection";
 import FormSection from "../components/formSection";
 import FooterSection from "../components/footerSection";
+import PartnerSection from "../components/partnerSection";
 
 export default function Home() {
   //Ref
@@ -48,6 +49,7 @@ export default function Home() {
       <NFTSection nftRef={nft} />
       <RoadmapSection roadmapRef={roadmap} />
       <FormSection />
+      <PartnerSection />
       <FooterSection />
     </div>
   );
