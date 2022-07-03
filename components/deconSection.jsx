@@ -18,8 +18,10 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { useToast } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ModalLandingPage from "./ModalLandingPage";
+import ModalPositive from "./ModalPositive";
+import ModalNegative from "./ModalNegative";
 
 const DeconSection = ({
   storyFunction,
@@ -29,7 +31,16 @@ const DeconSection = ({
   roadmapFunction,
 }) => {
   //Modal
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: isOpenPositive,
+    onOpen: onOpenPositive,
+    onClose: onClosePositive,
+  } = useDisclosure();
+  const {
+    isOpen: isOpenNegative,
+    onOpen: onOpenNegative,
+    onClose: onCloseNegative,
+  } = useDisclosure();
 
   //Toast
   const toast = useToast();
@@ -39,6 +50,9 @@ const DeconSection = ({
   const connectWithMetamask = useMetamask();
   const networkMismatched = useNetworkMismatch();
   const [, switchNetwork] = useNetwork(); // Switch network
+
+  //Button Change
+  const [afterClick, setAfterClick] = useState(false);
 
   // Replace this address with your NFT Drop address!
   const editionDrop = useEditionDrop(
@@ -80,22 +94,26 @@ const DeconSection = ({
   const modalKebuka = async () => {
     try {
       await connectWithMetamask();
+      setAfterClick(true);
 
       if (balance > 0) {
-        onOpen();
+        return onOpenPositive();
       }
       if (balance <= 0) {
-        onOpen();
+        return onOpenNegative();
       }
     } catch (error) {
       console.log(error);
     }
   };
 
-    // if the user is connected and has an NFT from the drop, display text
-    if (balance > 0) {
-      onOpen()
-    }
+  // if the user is connected and has an NFT from the drop, display text
+  // if (balance > 0) {
+  //   return onOpenPositive();
+  // }
+  // if (balance <= 0) {
+  //   return onOpenNegative();
+  // }
 
   // if (balance <= 0) {
   //   return (
@@ -155,7 +173,21 @@ const DeconSection = ({
           onClick={() => modalKebuka()}
           className="hover:scale-110 duration-500"
         >
-          <ButtonCustom text="Connect Wallet" w="193px" h="43px" size="20px" />
+          {afterClick ? (
+            <ButtonCustom
+              text={truncateAddress(address)}
+              w="193px"
+              h="43px"
+              size="20px"
+            />
+          ) : (
+            <ButtonCustom
+              text="Connect Wallet"
+              w="193px"
+              h="43px"
+              size="20px"
+            />
+          )}
         </div>
       </div>
       <div className="absolute w-full h-fit top-0 right-0 left-0">
@@ -175,11 +207,18 @@ const DeconSection = ({
           community
         </p>
       </div>
-      {/* <div className="flex justify-center relative pt-10">
-        <div className="hover:scale-110 duration-500">
-          <ButtonCustom text="Connect Wallet" w="328px" h="76px" size="32px" />
+      {afterClick ? (
+        <div className="flex justify-center relative pt-10">
+          <div
+            className="hover:scale-110 duration-500"
+            onClick={() => modalKebuka()}
+          >
+            {/* HOME BIG BUTTON */}
+            <ButtonCustom text="Go to NFT" w="328px" h="76px" size="32px" />
+          </div>
         </div>
-      </div> */}
+      ) : null}
+
       {/* {balance <= 0
         ? toast({
             title: "Gabisa",
@@ -201,7 +240,17 @@ const DeconSection = ({
             isClosable: true,
           })
         : null} */}
-      <ModalLandingPage isOpen={isOpen} onClose={onClose} balance={balance} />
+      {/* <ModalLandingPage isOpen={isOpen} onClose={onClose} balance={balance} /> */}
+      <ModalPositive
+        isOpen={isOpenPositive}
+        onClose={onClosePositive}
+        balance={balance}
+      />
+      <ModalNegative
+        isOpen={isOpenNegative}
+        onClose={onCloseNegative}
+        balance={balance}
+      />
     </div>
   );
 };
