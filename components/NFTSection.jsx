@@ -94,7 +94,7 @@ const NFTSection = ({ nftRef, hiddenProp }) => {
             <Link href="/nft">
               <div
                 hidden={hiddenProp}
-                className="mt-[40px] hover:scale-110 duration-500"
+                className="mt-[40px] hover:scale-110 duration-500 w-fit"
               >
                 <ButtonCustom h="43px" w="193px" text="View More" />
               </div>

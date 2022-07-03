@@ -2,7 +2,7 @@ const PartnerSection = () => {
   return (
     <div className="w-full h-[850px] bg-[#202020]">
       <div className="text-4xl flex justify-center mt-20">
-        <div className="text-[#FFD100] tracking-widest">
+        <div className="text-[#FFD100] tracking-widest font-bold">
           OUR <span className="text-white">PARTNERS</span>
         </div>
       </div>

@@ -125,7 +125,7 @@ const ModalLandingPage = ({ isOpen, onOpen, onClose, balance }) => {
                 rel="noopener noreferrer"
               >
                 <Center>
-                  <div className="mt-[40px] hover:scale-110 duration-500">
+                  <div className="mt-[40px] hover:scale-110 duration-500 w-fit">
                     <ButtonCustom h="44px" w="148px" text="View NFT" />
                   </div>
                 </Center>
