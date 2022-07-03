@@ -75,14 +75,7 @@ const DeconSection = ({
     return `${address.slice(0, 6)}...${address.slice(-5)}`;
   }
 
-  // if the user is connected and has an NFT from the drop, display text
-  if (balance > 0) {
-    return (
-      <div>
-        <h2>Yes, kamu adalah anggota DECONNNN!!! 🟦🔺🟣</h2>
-      </div>
-    );
-  }
+
 
   const modalKebuka = async () => {
     try {
@@ -98,6 +91,11 @@ const DeconSection = ({
       console.log(error);
     }
   };
+
+    // if the user is connected and has an NFT from the drop, display text
+    if (balance > 0) {
+      onOpen()
+    }
 
   // if (balance <= 0) {
   //   return (
@@ -177,11 +175,11 @@ const DeconSection = ({
           community
         </p>
       </div>
-      <div className="flex justify-center relative pt-10">
+      {/* <div className="flex justify-center relative pt-10">
         <div className="hover:scale-110 duration-500">
           <ButtonCustom text="Connect Wallet" w="328px" h="76px" size="32px" />
         </div>
-      </div>
+      </div> */}
       {/* {balance <= 0
         ? toast({
             title: "Gabisa",

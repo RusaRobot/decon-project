@@ -11,7 +11,7 @@ const NFTSection = ({ nftRef, hiddenProp }) => {
       >
         <div className="flex justify-between mx-auto gap-[32px] w-fit">
           <div className="w-[514px] h-[796px]">
-            <img src="./Decon.png" alt="Decon" />
+            <img className="h-[796px] object-cover" src="/DECON-Card.gif" alt="Decon" />
           </div>
           <div className=" w-[514px] h-[796px]">
             <Text
@@ -91,14 +91,15 @@ const NFTSection = ({ nftRef, hiddenProp }) => {
                 </p>
               </div>
             </div>
-            <Link href="/nft">
+            <a target="_blank" href="https://opensea.io/assets/matic/0xcfac3ae7cca862473e7fbcbe091d3aa7dfadcc3e/0" rel="noopener noreferrer">
+          
               <div
                 hidden={hiddenProp}
                 className="mt-[40px] hover:scale-110 duration-500 w-fit"
               >
                 <ButtonCustom h="43px" w="193px" text="View More" />
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
