@@ -30,7 +30,7 @@ const ModalPositive = ({ isOpen, onOpen, onClose, balance }) => {
                 w="fit-content"
                 h="fit-content"
               >
-                {balance > 0 ? "Tankyou!" : "Sorry..."}
+                {balance > 0 ? "Thankyou!" : "Sorry..."}
               </Text>
             </Center>
             <ModalCloseButton w="36px" h="36px" mt="24px" mr="40px">
@@ -44,7 +44,7 @@ const ModalPositive = ({ isOpen, onOpen, onClose, balance }) => {
             <div className="flex justify-between mx-[70px] mt-[27px]">
               <>
                 <div className="w-[192px] h-[270px]">
-                  <img src="./Decon.png" alt="Decon" />
+                  <img className="h-[270px] object-cover" src="./DECON-Card.gif" alt="Decon" />
                 </div>
                 <div className=" w-[530px] h-[275px]">
                   <p className="text-[#D6D6D6] text-base">
@@ -115,7 +115,7 @@ const ModalPositive = ({ isOpen, onOpen, onClose, balance }) => {
             {balance > 0 ? (
               <a
                 target="_blank"
-                href="https://opensea.io/"
+                href="https://opensea.io/assets/matic/0xcfac3ae7cca862473e7fbcbe091d3aa7dfadcc3e/0"
                 rel="noopener noreferrer"
               >
                 <Center>
