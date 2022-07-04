@@ -6,7 +6,7 @@ const cardData = [
     image: "/DeconBlockchainDeFi.jpg",
     alt: "",
     title: "Activity 1",
-    description: `[Course Description] Providing education and literacy is
+    description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
   literacy will guide people to conquer the
@@ -16,7 +16,7 @@ const cardData = [
     image: "/DeconCourse1.jpg",
     alt: "",
     title: "Activity 2",
-    description: `[Course Description] Providing education and literacy is
+    description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
   literacy will guide people to conquer the
@@ -26,7 +26,7 @@ const cardData = [
     image: "/DeconCourse2.jpg",
     alt: "",
     title: "Activity 3",
-    description: `[Course Description] Providing education and literacy is
+    description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
   literacy will guide people to conquer the
@@ -36,7 +36,7 @@ const cardData = [
     image: "/DeconCourse3.jpg",
     alt: "",
     title: "Activity 4",
-    description: `[Course Description] Providing education and literacy is
+    description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
   literacy will guide people to conquer the
@@ -46,7 +46,7 @@ const cardData = [
     image: "DeconVol2.jpg",
     alt: "",
     title: "Activity 5",
-    description: `[Course Description] Providing education and literacy is
+    description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
   literacy will guide people to conquer the
@@ -70,7 +70,7 @@ const Card = () => {
   var settings = {
     dots: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 2000,
@@ -111,7 +111,7 @@ const Card = () => {
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,
@@ -128,8 +128,8 @@ const Card = () => {
         {cardData.map((val, i) => {
           return (
             <div className="" key={i}>
-              <div className="rounded-xl overflow-hidden bg-[#202020] w-[480px] h-[1060px]">
-                <div className="bg[#142247] container h-[850px] overflow-hidden flex">
+              <div className="rounded-xl overflow-hidden bg-[#202020] w-[200px] h-[600px]">
+                <div className="bg[#142247] container h-[320px] overflow-hidden flex">
                   <img
                     src={val.image}
                     alt={val.alt}
@@ -137,7 +137,7 @@ const Card = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-yellowPrimary font-bold text-[32px]">
+                  <p className="text-yellowPrimary font-bold text-[14px]">
                     {val.title}
                   </p>
                   <p className="text-[#D6D6D6] mt-2">{val.description}</p>

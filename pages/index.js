@@ -48,7 +48,7 @@ export default function Home() {
       <ActivitySection activityRef={activity} />
       <NFTSection nftRef={nft} />
       <RoadmapSection roadmapRef={roadmap} />
-      <FormSection />
+      {/* <FormSection /> */}
       <PartnerSection />
       <FooterSection />
     </div>
