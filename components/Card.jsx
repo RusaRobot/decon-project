@@ -83,7 +83,7 @@ const Card = () => {
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,
@@ -97,7 +97,7 @@ const Card = () => {
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,
@@ -111,7 +111,7 @@ const Card = () => {
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,
