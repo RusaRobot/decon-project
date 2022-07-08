@@ -19,7 +19,7 @@ const RoadmapSection = ({ roadmapRef }) => {
           Roadmap
         </Text>
       </div>
-      <div className="flex justify-between mx-32 mt-12">
+      <div className="flex justify-between mx-auto mt-12 gap-8 w-[1000px]">
         <div className="w-[348px] h-[272px] bg-[#202020] rounded-3xl p-10 text-[#D6D6D6]">
           <div className="text-3xl flex justify-center border-b-2 border-b-[#D6D6D6] py-3 text-[#FFD100]">
             Phase 1

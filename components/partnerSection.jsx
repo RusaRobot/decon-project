@@ -16,9 +16,6 @@ const PartnerSection = () => {
         <div>
           <img className="w-[225px]" src="/Logo-Anteraja.png" alt="" />
         </div>
-        <div>
-          <img className="w-[225px]" src="/Logo-Pacmann-AI.png" alt="" />
-        </div>
       </div>
       <div className="flex justify-between items-center text-white mx-auto w-[900px] mt-20">
         <div>

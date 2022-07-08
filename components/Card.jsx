@@ -128,7 +128,7 @@ const Card = () => {
         {cardData.map((val, i) => {
           return (
             <div className="" key={i}>
-              <div className="rounded-xl overflow-hidden bg-[#202020] w-[200px] h-[600px]">
+              <div className="rounded-xl overflow-hidden bg-[#202020] w-[200px] h-[390px]">
                 <div className="bg[#142247] container h-[320px] overflow-hidden flex">
                   <img
                     src={val.image}
@@ -137,10 +137,10 @@ const Card = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <p className="text-yellowPrimary font-bold text-[14px]">
+                  <p className="text-yellowPrimary font-bold text-[14px] text-center">
                     {val.title}
                   </p>
-                  <p className="text-[#D6D6D6] mt-2">{val.description}</p>
+                  {/* <p className="text-[#D6D6D6] mt-2">{val.description}</p> */}
                 </div>
               </div>
             </div>
