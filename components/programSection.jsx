@@ -30,46 +30,57 @@ const ProgramSection = ({ programRef }) => {
               <img
                 src="/1.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/2.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/3.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/4.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/5.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/6.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/7.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/8.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/9.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/10.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
               <img
                 src="/11.png"
                 className="object-fill w-full aspect-square rounded-2xl"
+                loading="lazy"
               />
             </UISlider>
           </div>

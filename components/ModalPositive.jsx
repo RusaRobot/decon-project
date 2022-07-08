@@ -44,7 +44,12 @@ const ModalPositive = ({ isOpen, onOpen, onClose, balance }) => {
             <div className="flex justify-between mx-[70px] mt-[27px]">
               <>
                 <div className="w-[192px] h-[270px]">
-                  <img className="h-[270px] object-cover" src="./DECON-Card.gif" alt="Decon" />
+                  <img
+                    className="h-[270px] object-cover"
+                    src="./DECON-Card.gif"
+                    alt="Decon"
+                    loading="lazy"
+                  />
                 </div>
                 <div className=" w-[530px] h-[275px]">
                   <p className="text-[#D6D6D6] text-base">

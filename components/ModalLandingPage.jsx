@@ -45,7 +45,7 @@ const ModalLandingPage = ({ isOpen, onOpen, onClose, balance }) => {
               {balance > 0 ? (
                 <>
                   <div className="w-[192px] h-[270px]">
-                    <img src="./Decon.png" alt="Decon" />
+                    <img src="./Decon.png" alt="Decon" loading="lazy" />
                   </div>
                   <div className=" w-[530px] h-[275px]">
                     <p className="text-[#D6D6D6] text-base">

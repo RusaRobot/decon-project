@@ -40,7 +40,7 @@ const StorySection = ({ storyRef }) => {
       <div className="flex justify-between mx-auto w-[1000px] mt-12">
         <div className="flex flex-col w-[480px] h-[290px] bg-[#202020] rounded-3xl p-10 gap-6">
           <div className="flex items-center gap-7">
-            <img src="./Education _ literacy.svg" alt="" />
+            <img src="./Education _ literacy.svg" alt="" loading="lazy" />
             <div className="text-4xl text-[#D6D6D6]">Education & Literacy</div>
           </div>
           <div className="text-[#D6D6D6]">
@@ -52,7 +52,7 @@ const StorySection = ({ storyRef }) => {
         <div>
           <div className="flex flex-col w-[480px] h-[290px] bg-[#202020] rounded-3xl p-10 gap-6">
             <div className="flex items-center gap-7">
-              <img src="./Network _ community.svg" alt="" />
+              <img src="./Network _ community.svg" alt="" loading="lazy" />
               <div className="text-4xl text-[#D6D6D6]">Network & Community</div>
             </div>
             <div className="text-[#D6D6D6]">

@@ -1,4 +1,5 @@
 import ButtonCustom from "./buttonCustom";
+import Image from "next/image";
 import Link from "next/link";
 import {
   useAddress,
@@ -89,8 +90,6 @@ const DeconSection = ({
     return `${address.slice(0, 6)}...${address.slice(-5)}`;
   }
 
-
-
   const modalKebuka = async () => {
     try {
       await connectWithMetamask();
@@ -135,7 +134,12 @@ const DeconSection = ({
       <div className="flex z-10 py-10 px-14 justify-between items-center absolute top-0 right-0 left-0 text-[20px]">
         <Link href="/">
           <div className="w-[110px] h-[46px] hover:cursor-pointer">
-            <img className="w-full h-full" src="./DECON.svg" alt="" />
+            <img
+              className="w-full h-full"
+              src="./DECON.svg"
+              alt=""
+              loading="lazy"
+            />
           </div>
         </Link>
         <button
@@ -195,11 +199,17 @@ const DeconSection = ({
           className="w-full object-cover bg-[#1b1a1a]"
           src="./NASA.svg"
           alt=""
+          loading="lazy"
         />
       </div>
 
       <div className="flex justify-center relative pt-40">
-        <img className="w-[429px] h-[180px]" src="./DECON.svg" alt="" />
+        <img
+          className="w-[429px] h-[180px]"
+          src="./DECON.svg"
+          alt=""
+          loading="lazy"
+        />
       </div>
       <div className="flex justify-center relative">
         <p className="w-[712px] text-center text-[32px]">

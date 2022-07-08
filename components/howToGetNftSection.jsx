@@ -26,7 +26,7 @@ const GetNFT = () => {
             <div className="m-[40px] flex gap-8 items-center">
               <div className="text-[60px] text-[#D6D6D6]">1</div>
               <div>
-                <img src="./Transfer.svg" alt="" />
+                <img src="./Transfer.svg" alt="" loading="lazy" />
               </div>
               <div className="flex flex-col text-[#D6D6D6]">
                 <div className="text-[32px]">Transfer</div>
@@ -40,7 +40,12 @@ const GetNFT = () => {
             <div className="m-[40px] flex gap-8 items-center">
               <div className="text-[60px] text-[#D6D6D6]">2</div>
               <div className="w-[82px]">
-                <img className="ml-[10px]" src="./Fill form.svg" alt="" />
+                <img
+                  className="ml-[10px]"
+                  src="./Fill form.svg"
+                  alt=""
+                  loading="lazy"
+                />
               </div>
               <div className="flex flex-col text-[#D6D6D6]">
                 <div className="text-[32px]">Fill The Form</div>
@@ -54,7 +59,7 @@ const GetNFT = () => {
             <div className="m-[40px] flex gap-8 items-center">
               <div className="text-[60px] text-[#D6D6D6]">3</div>
               <div className="w-[82px]">
-                <img src="./Wallet.svg" alt="" />
+                <img src="./Wallet.svg" alt="" loading="lazy" />
               </div>
               <div className="flex flex-col text-[#D6D6D6]">
                 <div className="text-[32px]">Wallet Confirmation</div>
@@ -69,7 +74,7 @@ const GetNFT = () => {
             <div className="m-[40px] flex gap-8 items-center">
               <div className="text-[60px] text-[#D6D6D6]">4</div>
               <div className="w-[82px]">
-                <img src="./Distribution.svg" alt="" />
+                <img src="./Distribution.svg" alt="" loading="lazy" />
               </div>
               <div className="flex flex-col text-[#D6D6D6]">
                 <div className="text-[32px]">Transfer</div>

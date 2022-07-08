@@ -8,24 +8,44 @@ const PartnerSection = () => {
       </div>
       <div className="flex justify-between items-center text-white mx-auto w-[1060px] mt-28">
         <div>
-          <img className="w-[225px]" src="/Logo_Nobubank.png" alt="" />
+          <img
+            className="w-[225px]"
+            src="/Logo_Nobubank.png"
+            alt=""
+            loading="lazy"
+          />
         </div>
         <div>
-          <img className="w-[225px]" src="/bitwyre.png" alt="" />
+          <img className="w-[225px]" src="/bitwyre.png" alt="" loading="lazy" />
         </div>
         <div>
-          <img className="w-[225px]" src="/Logo-Anteraja.png" alt="" />
+          <img
+            className="w-[225px]"
+            src="/Logo-Anteraja.png"
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
       <div className="flex justify-between items-center text-white mx-auto w-[900px] mt-20">
         <div>
-          <img className="w-[225px]" src="/Logo-Pluang.png" alt="" />
+          <img
+            className="w-[225px]"
+            src="/Logo-Pluang.png"
+            alt=""
+            loading="lazy"
+          />
         </div>
         <div>
-          <img className="w-[225px]" src="/Mandiri_logo.png" alt="" />
+          <img
+            className="w-[225px]"
+            src="/Mandiri_logo.png"
+            alt=""
+            loading="lazy"
+          />
         </div>
         <div>
-          <img className="w-[225px]" src="/pacmann.png" alt="" />
+          <img className="w-[225px]" src="/pacmann.png" alt="" loading="lazy" />
         </div>
       </div>
     </div>

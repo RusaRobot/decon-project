@@ -134,6 +134,7 @@ const Card = () => {
                     src={val.image}
                     alt={val.alt}
                     className="object-cover mx-auto"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-6">
