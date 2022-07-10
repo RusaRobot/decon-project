@@ -118,10 +118,13 @@ const ProgramSection = ({ programRef }) => {
                   Place: Auditorium R. Soeriaatmadja FEB UI
                 </p>
               </div>
-              <a target="_blank" href="" rel="noopener noreferrer">
+              <a 
+              target="_blank" 
+              href="https://www.youtube.com/c/MSSFEBUIchannel" 
+              rel="noopener noreferrer">
                 <div className="mt-12 w-fit">
                   <div className="hover:scale-110 duration-500">
-                    <ButtonCustom text="Register Now" w="193px" h="43px" />
+                    <ButtonCustom text="Watch Now" w="193px" h="43px" />
                   </div>
                 </div>
               </a>

@@ -49,9 +49,9 @@ export default function Home() {
         <ProgramSection programRef={program} />
         <ActivitySection activityRef={activity} />
         <NFTSection nftRef={nft} />
-        <RoadmapSection roadmapRef={roadmap} />
-        {/* <FormSection /> */}
+        <RoadmapSection roadmapRef={roadmap} />        
         <PartnerSection />
+        <FormSection />
         <FooterSection />
       </div>
       <div className="xl:hidden bg-[#202020] min-h-screen">
