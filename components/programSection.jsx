@@ -125,9 +125,20 @@ const ProgramSection = ({ programRef }) => {
                 <div className="mt-12 w-fit">
                   <div className="hover:scale-110 duration-500">
                     <ButtonCustom text="Watch Now" w="193px" h="43px" />
-                  </div>
+                  </div>                  
                 </div>
               </a>
+              <a 
+              target="_blank" 
+              href="http://bit.ly/3Ntxbrv" 
+              rel="noopener noreferrer">                
+                <div className="flex-center align-center mt-[5px]">
+                  <button className=
+                    "flex-center align-center hover:bg-blue-700 rounded text-white text-[15px]">
+                  Learning materials download 
+                  </button>
+                </div>
+              </a>                   
             </div>
           </div>
         </div>
