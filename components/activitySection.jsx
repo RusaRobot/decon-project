@@ -22,7 +22,7 @@ const ActivitySection = ({ activityRef }) => {
           Activity
         </Text>
         <p className="text-[#D6D6D6] px-44 mb-10">
-          [Description] An innovation-based economy will be the primary driver
+          An innovation-based economy will be the primary driver
           of Indonesia&apos;s economic progress. FEBUI alumni must have a
           strategic role and actively synergize with various alumni from the
           stakeholders such as the Government, investors, professionals,

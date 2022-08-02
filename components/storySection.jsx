@@ -2,9 +2,9 @@ import { Text } from "@chakra-ui/react";
 
 const StorySection = ({ storyRef }) => {
   return (
-    <div className="w-full h-[1000px] 2xl:h-[1300px] bg-gradient-to-b from-[#202020] to-[#333533] flex flex-col text-white pt-36 2xl:pt-96">
+    <div className="w-full h-[800px] 2xl:h-[1100px] bg-gradient-to-b from-[#202020] to-[#333533] flex flex-col text-white pt-36 2xl:pt-96">
       <div
-        className="font-bold xl:mt-32 2xl:mt-36 w-[1000px] mx-auto"
+        className="flex justify-center mt-[10px] w-[1000px] mx-auto"
         ref={storyRef}
       >
         <Text
@@ -19,7 +19,7 @@ const StorySection = ({ storyRef }) => {
         </Text>
       </div>
       <div className="mt-8 w-[1000px] mx-auto text-justify text-[16px] text-[#D6D6D6]">
-        <p className="w-[650px]">
+        <p className="w-[1000px]">
           An innovation-based economy will be the primary driver of
           Indonesia&apos;s economic progress. FEBUI alumni must have a strategic
           role and actively synergize with various alumni from the stakeholders
@@ -28,7 +28,7 @@ const StorySection = ({ storyRef }) => {
         </p>
       </div>
       <div className="mt-4 w-[1000px] mx-auto text-justify text-[16px] text-[#D6D6D6]">
-        <p className="w-[650px]">
+        <p className="w-[1000px]">
           {" "}
           DECON (Digital & New Economy) is a community by FEBUI alumni that has
           the initiative to advance Indonesia&apos;s innovation economy

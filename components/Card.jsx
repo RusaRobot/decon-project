@@ -5,7 +5,7 @@ const cardData = [
   {
     image: "/DeconBlockchainDeFi.jpg",
     alt: "",
-    title: "Activity 1",
+    title: "Blockchain and DeFi",
     description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
@@ -15,7 +15,7 @@ const cardData = [
   {
     image: "/DeconCourse1.jpg",
     alt: "",
-    title: "Activity 2",
+    title: "Decon Course Vol. 1",
     description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
@@ -25,7 +25,7 @@ const cardData = [
   {
     image: "/DeconCourse2.jpg",
     alt: "",
-    title: "Activity 3",
+    title: "Decon Course Vol. 2",
     description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
@@ -35,7 +35,7 @@ const cardData = [
   {
     image: "/DeconCourse3.jpg",
     alt: "",
-    title: "Activity 4",
+    title: "Decon Course Vol. 3",
     description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
@@ -45,7 +45,7 @@ const cardData = [
   {
     image: "DeconVol2.jpg",
     alt: "",
-    title: "Activity 5",
+    title: "Decon Insight",
     description: `Providing education and literacy is
   essential as people pay more attention to
   technologies. A reasonable basis of
@@ -111,7 +111,7 @@ const Card = () => {
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,

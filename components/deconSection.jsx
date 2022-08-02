@@ -224,7 +224,7 @@ const DeconSection = ({
             onClick={() => modalKebuka()}
           >
             {/* HOME BIG BUTTON */}
-            <ButtonCustom text="Go to NFT" w="328px" h="76px" size="32px" />
+            <ButtonCustom text="Access Member" w="328px" h="76px" size="32px" />
           </div>
         </div>
       ) : null}

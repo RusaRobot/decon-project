@@ -114,14 +114,14 @@ const ModalLandingPage = ({ isOpen, onOpen, onClose, balance }) => {
                 </>
               ) : (
                 <p className="text-white mx-auto text-3xl mt-[100px]">
-                  Maaf anda belum mempunyai NFT
+                  Anda belum menjadi member Decon
                 </p>
               )}
             </div>
             {balance > 0 ? (
               <a
                 target="_blank"
-                href="https://opensea.io/"
+                href="https://opensea.io/assets/matic/0xcfac3ae7cca862473e7fbcbe091d3aa7dfadcc3e/0"
                 rel="noopener noreferrer"
               >
                 <Center>

@@ -10,24 +10,11 @@ const PartnerSection = () => {
         <div>
           <img
             className="w-[225px]"
-            src="/Logo_Nobubank.png"
+            src="/Mandiri_logo.png"
             alt=""
             loading="lazy"
           />
         </div>
-        <div>
-          <img className="w-[225px]" src="/bitwyre.png" alt="" loading="lazy" />
-        </div>
-        <div>
-          <img
-            className="w-[225px]"
-            src="/Logo-Anteraja.png"
-            alt=""
-            loading="lazy"
-          />
-        </div>
-      </div>
-      <div className="flex justify-between items-center text-white mx-auto w-[900px] mt-20">
         <div>
           <img
             className="w-[225px]"
@@ -39,13 +26,26 @@ const PartnerSection = () => {
         <div>
           <img
             className="w-[225px]"
-            src="/Mandiri_logo.png"
+            src="/Logo-Anteraja.png"
+            alt=""
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div className="flex justify-between items-center text-white mx-auto w-[900px] mt-20">        
+        <div>
+          <img
+            className="w-[225px]"
+            src="/Logo_Nobubank.png"
             alt=""
             loading="lazy"
           />
         </div>
         <div>
           <img className="w-[225px]" src="/pacmann.png" alt="" loading="lazy" />
+        </div>
+        <div>
+          <img className="w-[225px]" src="/bitwyre.png" alt="" loading="lazy" />
         </div>
       </div>
     </div>

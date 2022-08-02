@@ -44,7 +44,7 @@ const ModalNegative = ({ isOpen, onOpen, onClose, balance }) => {
             <div className="flex justify-between mx-[70px] mt-[27px]">
               (
               <p className="text-white mx-auto text-3xl mt-[100px]">
-                Maaf anda belum mempunyai NFT
+              Anda belum menjadi member Decon
               </p>
               )
             </div>
