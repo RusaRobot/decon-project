@@ -5,13 +5,13 @@ const RoadmapSection = ({ roadmapRef }) => {
   return (
     <div
       ref={roadmapRef}
-      className="w-full h-[626px] bg-gradient-to-t from-[#212121] to-[#333533] flex flex-col"
+      className="w-full h-[1050px] lg:h-[626px] bg-gradient-to-t from-[#212121] to-[#333533] flex flex-col"
     >
       <div className="flex justify-center mt-20">
         <Text
           bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
           bgClip="text"
-          fontSize="60px"
+          fontSize={{ base: "24px", lg: "60px" }}
           fontWeight="bold"
           w="fit-content"
           h="fit-content"
@@ -19,8 +19,8 @@ const RoadmapSection = ({ roadmapRef }) => {
           Roadmap
         </Text>
       </div>
-      <div className="flex justify-between mx-auto mt-12 gap-8 w-[1000px]">
-        <div className="w-[348px] h-[272px] bg-[#202020] rounded-3xl p-10 text-[#D6D6D6]">
+      <div className="lg:flex-row lg:justify-between flex flex-col mx-auto mt-12 gap-8 lg:w-[1000px]">
+        <div className="w-[270px] h-[250px] lg:w-[348px] lg:h-[272px] bg-[#202020] rounded-3xl p-10 text-[#D6D6D6]">
           <div className="text-3xl flex justify-center border-b-2 border-b-[#D6D6D6] py-3 text-[#FFD100]">
             Phase 1
           </div>
@@ -41,7 +41,7 @@ const RoadmapSection = ({ roadmapRef }) => {
             <span>Education</span>
           </div>
         </div>
-        <div className="w-[348px] h-[272px] bg-[#202020] rounded-3xl p-10 text-[#D6D6D6]">
+        <div className="w-[270px] h-[250px] lg:w-[348px] lg:h-[272px] bg-[#202020] rounded-3xl p-10 text-[#D6D6D6]">
           <div className="text-3xl flex justify-center border-b-2 border-b-[#D6D6D6] py-3 text-[#FFD100]">
             Phase 2
           </div>
@@ -58,7 +58,7 @@ const RoadmapSection = ({ roadmapRef }) => {
             <span>NFT Gen 2 for ILUNI</span>
           </div>
         </div>
-        <div className="w-[348px] h-[272px] bg-[#202020] rounded-3xl p-10 text-[#D6D6D6]">
+        <div className="w-[270px] h-[250px] lg:w-[348px] lg:h-[272px] bg-[#202020] rounded-3xl p-10 text-[#D6D6D6]">
           <div className="text-3xl flex justify-center border-b-2 border-b-[#D6D6D6] py-3 text-[#FFD100]">
             Phase 3
           </div>

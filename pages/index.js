@@ -27,7 +27,7 @@ export default function Home() {
   };
   return (
     <>
-      <div className="xl:flex flex-col hidden ">
+      <div className="flex-col">
         <DeconSection
           storyFunction={() => {
             scrollToElement(story);
@@ -46,15 +46,15 @@ export default function Home() {
           }}
         />
         <StorySection storyRef={story} />
-        <ProgramSection programRef={program} />
-        <ActivitySection activityRef={activity} />
-        <NFTSection nftRef={nft} />
-        <RoadmapSection roadmapRef={roadmap} />        
+        {/* <ProgramSection programRef={program} /> */}
+        {/* <ActivitySection activityRef={activity} /> */}
+        {/* <NFTSection nftRef={nft} /> */}
+        <RoadmapSection roadmapRef={roadmap} />
         <PartnerSection />
         <FormSection />
         <FooterSection />
       </div>
-      <div className="xl:hidden bg-[#202020] min-h-screen">
+      <div className="hidden bg-[#202020] min-h-screen">
         <div className="flex justify-center">
           <div className="mt-[30vh]">
             <img

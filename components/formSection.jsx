@@ -44,17 +44,17 @@ const FormSection = () => {
   };
 
   return (
-    <div className="w-full h-[626px] bg-[#333533] flex flex-col">
-      <div className="mx-auto flex justify-center w-[1060px] h-[453px] bg-[#202020] mt-20 px-10 py-14 rounded-3xl">
+    <div className="w-full h-[550px] lg:h-[626px] bg-[#333533] flex flex-col">
+      <div className="mx-auto flex justify-center w-[400px] lg:w-[1060px] lg:h-[453px] bg-[#202020] mt-20 px-10 py-14 rounded-3xl">
         <div className="text-white">
-          <div className="flex justify-center text-[60px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD100] to-[#D6D6D6]">
+          <div className="flex justify-center text-[24px] lg:text-[60px] font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#FFD100] to-[#D6D6D6]">
             Interest to join us?
           </div>
-          <div className="text-center text-[32px]">
+          <div className="text-center text-[16px] lg:text-[32px]">
             Input your name & email, we will reach you
           </div>
-          <form>
-            <div className="flex justify-center gap-3 mt-10">
+          <form onSubmit={formik.handleSubmit}>
+            <div className="lg:flex-row lg:justify-center flex flex-col gap-3 mt-10">
               <div>
                 <input
                   className="w-[348px] h-[43px] rounded-full px-3 text-black focus:outline-none focus:ring-4 focus:ring-[#FFD100]"
@@ -90,7 +90,7 @@ const FormSection = () => {
             </div>
           </form>
           <div className="flex justify-center mt-10">
-            <div className="hover:scale-110 duration-500">
+            <div className="hover:scale-110 duration-500 hidden lg:inline">
               <ButtonCustom
                 text="Submit"
                 w="203px"
@@ -99,6 +99,17 @@ const FormSection = () => {
                   submitForm();
                 }}
                 size="32px"
+              />
+            </div>
+            <div className="hover:scale-110 duration-500 lg:hidden">
+              <ButtonCustom
+                text="Submit"
+                w="150px"
+                h="40px"
+                onClick={() => {
+                  submitForm();
+                }}
+                size="16px"
               />
             </div>
           </div>

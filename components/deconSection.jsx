@@ -23,6 +23,8 @@ import { useState, useEffect } from "react";
 import ModalLandingPage from "./ModalLandingPage";
 import ModalPositive from "./ModalPositive";
 import ModalNegative from "./ModalNegative";
+import { GiHamburgerMenu } from "react-icons/gi";
+import DrawerDecon from "./Drawer";
 
 const DeconSection = ({
   storyFunction,
@@ -41,6 +43,11 @@ const DeconSection = ({
     isOpen: isOpenNegative,
     onOpen: onOpenNegative,
     onClose: onCloseNegative,
+  } = useDisclosure();
+  const {
+    isOpen: isOpenDrawer,
+    onOpen: onOpenDrawer,
+    onClose: onCloseDrawer,
   } = useDisclosure();
 
   //Toast
@@ -130,10 +137,10 @@ const DeconSection = ({
   // }
 
   return (
-    <div className="h-[588px] w-full text-white relative">
-      <div className="flex z-10 py-10 px-14 justify-between items-center absolute top-0 right-0 left-0 text-[20px]">
+    <div className="h-[411px] lg:h-[588px] w-full text-white relative">
+      <div className="flex z-10 py-10 px-8 lg:px-14 justify-between items-center bg-[#1d1b1a] bg-opacity-10 backdrop-blur-sm fixed top-0 right-0 left-0 text-[20px]">
         <Link href="/">
-          <div className="w-[110px] h-[46px] hover:cursor-pointer">
+          <div className="w-[58px] h-[24px] lg:w-[110px] lg:h-[46px] hover:cursor-pointer">
             <img
               className="w-full h-full"
               src="./DECON.svg"
@@ -143,39 +150,45 @@ const DeconSection = ({
           </div>
         </Link>
         <button
+          onClick={onOpenDrawer}
+          className="text-xl text-[#FFD100] lg:hidden"
+        >
+          <GiHamburgerMenu />
+        </button>
+        <button
           onClick={storyFunction}
-          className="hover:text-[#FFD100] hover:scale-110 duration-500"
+          className="hover:text-[#FFD100] hover:scale-110 duration-500 hidden lg:inline"
         >
           Story
         </button>
 
         <button
           onClick={programFunction}
-          className="hover:text-[#FFD100] hover:scale-110 duration-500"
+          className="hover:text-[#FFD100] hover:scale-110 duration-500 hidden lg:inline"
         >
           Program
         </button>
         <button
           onClick={activityFunction}
-          className="hover:text-[#FFD100] hover:scale-110 duration-500"
+          className="hover:text-[#FFD100] hover:scale-110 duration-500 hidden lg:inline"
         >
           Activity
         </button>
         <button
           onClick={nftFunction}
-          className="hover:text-[#FFD100] hover:scale-110 duration-500"
+          className="hover:text-[#FFD100] hover:scale-110 duration-500 hidden lg:inline"
         >
           NFT
         </button>
         <button
           onClick={roadmapFunction}
-          className="hover:text-[#FFD100] hover:scale-110 duration-500"
+          className="hover:text-[#FFD100] hover:scale-110 duration-500 hidden lg:inline"
         >
           Roadmap
         </button>
         <div
           onClick={() => modalKebuka()}
-          className="hover:scale-110 duration-500"
+          className="hover:scale-110 duration-500 hidden lg:inline"
         >
           {afterClick ? (
             <ButtonCustom
@@ -194,10 +207,10 @@ const DeconSection = ({
           )}
         </div>
       </div>
-      <div className="absolute w-full h-fit top-0 right-0 left-0">
+      <div className="absolute w-full h-screen lg:h-fit top-0 right-0 left-0">
         <img
-          className="w-full object-cover bg-[#1b1a1a]"
-          src="./NASA.svg"
+          className="w-full h-[411px] lg:h-[700px] object-cover bg-[#1b1a1a]"
+          src="./NASA.webp"
           alt=""
           loading="lazy"
         />
@@ -205,14 +218,14 @@ const DeconSection = ({
 
       <div className="flex justify-center relative pt-40">
         <img
-          className="w-[429px] h-[180px]"
+          className="w-[180px] h-[72px] lg:w-[429px] lg:h-[180px]"
           src="./DECON.svg"
           alt=""
           loading="lazy"
         />
       </div>
       <div className="flex justify-center relative">
-        <p className="w-[712px] text-center text-[32px]">
+        <p className="w-[272px] lg:w-[712px] text-center text-[12px] lg:text-[32px]">
           An Ecosystem to navigate in the Future of Digital Economy through
           community
         </p>
@@ -260,6 +273,15 @@ const DeconSection = ({
         isOpen={isOpenNegative}
         onClose={onCloseNegative}
         balance={balance}
+      />
+      <DrawerDecon
+        isOpenDrawer={isOpenDrawer}
+        onCloseDrawer={onCloseDrawer}
+        storyFunction={storyFunction}
+        programFunction={programFunction}
+        nftFunction={nftFunction}
+        roadmapFunction={roadmapFunction}
+        activityFunction={activityFunction}
       />
     </div>
   );
