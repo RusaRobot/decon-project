@@ -2,11 +2,11 @@ import { Text } from "@chakra-ui/react";
 
 const StorySection = ({ storyRef }) => {
   return (
-    <div className="w-full h-full pb-10 lg:pb-0 lg:h-[900px] bg-gradient-to-b from-[#202020] to-[#333533] flex flex-col text-white pt-10 lg:pt-36">
-      <div
-        className="flex justify-center mt-[10px] w-full lg:w-[1000px] mx-auto"
-        ref={storyRef}
-      >
+    <div
+      className="w-full h-full pb-10 lg:pb-0 lg:h-[900px] bg-gradient-to-b from-[#202020] to-[#333533] flex flex-col text-white pt-10 lg:pt-36"
+      ref={storyRef}
+    >
+      <div className="flex justify-center mt-[10px] w-full lg:w-[1000px] mx-auto">
         <Text
           bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
           bgClip="text"

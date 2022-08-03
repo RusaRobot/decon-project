@@ -44,11 +44,21 @@ const DeconSection = ({
     onOpen: onOpenNegative,
     onClose: onCloseNegative,
   } = useDisclosure();
+  //Drawer
   const {
     isOpen: isOpenDrawer,
     onOpen: onOpenDrawer,
     onClose: onCloseDrawer,
   } = useDisclosure();
+  //Drawer Close onClick
+  const onCloseStory = () => {
+    storyFunction();
+    onCloseDrawer();
+  };
+  const onCloseRoadmap = () => {
+    roadmapFunction();
+    onCloseDrawer();
+  };
 
   //Toast
   const toast = useToast();
@@ -277,10 +287,10 @@ const DeconSection = ({
       <DrawerDecon
         isOpenDrawer={isOpenDrawer}
         onCloseDrawer={onCloseDrawer}
-        storyFunction={storyFunction}
+        storyFunction={onCloseStory}
         programFunction={programFunction}
         nftFunction={nftFunction}
-        roadmapFunction={roadmapFunction}
+        roadmapFunction={onCloseRoadmap}
         activityFunction={activityFunction}
       />
     </div>

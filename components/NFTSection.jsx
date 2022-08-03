@@ -2,7 +2,7 @@ import { Text } from "@chakra-ui/react";
 import ButtonCustom from "./buttonCustom";
 import Link from "next/link";
 
-const NFTSection = ({ nftRef, hiddenProp }) => {
+const NFTSection = ({ nftRef, hiddenProp, roadmapRef }) => {
   return (
     <>
       <div
@@ -100,6 +100,7 @@ const NFTSection = ({ nftRef, hiddenProp }) => {
               target="_blank"
               href="https://opensea.io/assets/matic/0xcfac3ae7cca862473e7fbcbe091d3aa7dfadcc3e/0"
               rel="noopener noreferrer"
+              ref={roadmapRef}
             >
               <div
                 hidden={hiddenProp}

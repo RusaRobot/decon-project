@@ -4,7 +4,7 @@ import { Text } from "@chakra-ui/react";
 const RoadmapSection = ({ roadmapRef }) => {
   return (
     <div
-      ref={roadmapRef}
+      // ref={roadmapRef}
       className="w-full h-[1050px] lg:h-[626px] bg-gradient-to-t from-[#212121] to-[#333533] flex flex-col"
     >
       <div className="flex justify-center mt-20">
