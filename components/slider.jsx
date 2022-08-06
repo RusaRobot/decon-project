@@ -11,7 +11,7 @@ const UISlider = (props) => {
     const { className, style, onClick } = props;
     return (
       <div
-        className="absolute flex justify-center items-center right-2 top-[255px] rounded-full w-5 h-5 bg-yellowSecondary hover:bg-yellowPrimary z-50 hover:cursor-pointer"
+        className="absolute flex justify-center items-center right-2 md:top-[255px] top-[160px] rounded-full w-5 h-5 bg-yellowSecondary hover:bg-yellowPrimary z-50 hover:cursor-pointer"
         onClick={onClick}
       >
         <GrFormNext className="text-[100px]" />
@@ -23,7 +23,7 @@ const UISlider = (props) => {
     const { className, style, onClick } = props;
     return (
       <div
-        className="absolute flex justify-center items-center left-2 top-[255px] rounded-full w-5 h-5 bg-yellowSecondary hover:bg-yellowPrimary z-50 hover:cursor-pointer"
+        className="absolute flex justify-center items-center left-2 md:top-[255px] top-[160px] rounded-full w-5 h-5 bg-yellowSecondary hover:bg-yellowPrimary z-50 hover:cursor-pointer"
         onClick={onClick}
       >
         <GrFormPrevious className="text-[100px]" />

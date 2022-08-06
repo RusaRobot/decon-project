@@ -46,9 +46,9 @@ export default function Home() {
           }}
         />
         <StorySection storyRef={story} />
-        {/* <ProgramSection programRef={program} /> */}
-        {/* <ActivitySection activityRef={activity} /> */}
-        {/* <NFTSection nftRef={nft} roadmapRef={roadmap} /> */}
+        <ProgramSection programRef={program} />
+        <ActivitySection activityRef={activity} />
+        <NFTSection nftRef={nft} roadmapRef={roadmap} />
         <RoadmapSection />
         <PartnerSection />
         <FormSection />

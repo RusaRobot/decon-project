@@ -9,28 +9,49 @@ const NFTSection = ({ nftRef, hiddenProp, roadmapRef }) => {
         ref={nftRef}
         className="flex-row w-full h-120% bg-[#202020] pb-[84px] pt-[80px]"
       >
-        <div className="flex justify-between mx-auto gap-[32px] w-fit">
-          <div className="w-[514px] h-[796px]">
+        <div className="lg:flex justify-between mx-auto lg:gap-[32px] lg:w-fit">
+          <div className="mx-auto lg:mx-0 w-[263px] h-[368px] lg:w-[514px] lg:h-[796px]">
             <img
-              className="h-[796px] object-cover"
+              className="h-[368px] lg:h-[796px] object-cover"
               src="/DECON-Card.gif"
               alt="Decon"
               loading="lazy"
             />
           </div>
-          <div className=" w-[514px] h-[796px]">
-            <Text
-              bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
-              bgClip="text"
-              fontSize="60px"
-              fontWeight="bold"
-              w="fit-content"
-              h="fit-content"
-              mx="auto"
-            >
-              1st Gen NFT Community Membership
-            </Text>
-            <p className="text-[#D6D6D6] text-base">
+          <div className="w-full lg:w-[514px] lg:h-[796px]">
+            <div className="hidden lg:inline">
+              <Text
+                bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
+                bgClip="text"
+                fontSize="60px"
+                fontWeight="bold"
+                w="fit-content"
+                h="fit-content"
+                mx="auto"
+                pt="40px"
+                pb="32px"
+              >
+                1st Gen NFT Community Membership
+              </Text>
+            </div>
+
+            <div className="text-center lg:hidden w-full">
+              <Text
+                bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
+                bgClip="text"
+                fontSize="24px"
+                fontWeight="bold"
+                w="fit-content"
+                h="fit-content"
+                mx="auto"
+                pt="40px"
+                pb="32px"
+              >
+                1st Gen NFT Community Membership
+              </Text>
+            </div>
+
+            <p className="text-[#D6D6D6] text-base mx-5 lg:mx-0">
               Decon’s NFT is here to support the digital economy through the
               community of Alumni FEB UI. As a membership pass, this NFT will
               give the holder access to the activity made by the community such
@@ -42,8 +63,8 @@ const NFTSection = ({ nftRef, hiddenProp, roadmapRef }) => {
               others. By being the first iluni to start, Decon’s may have many
               advantages on the ecosystem.
             </p>
-            <div className="text-[#D6D6D6] mt-6 flex justify-between">
-              <div className="w-[250px]">
+            <div className="text-[#D6D6D6] mt-6 flex flex-col lg:flex-row justify-between mx-5 lg:mx-0">
+              <div className="w-full lg:w-[250px]">
                 <Text
                   bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
                   bgClip="text"
@@ -54,7 +75,7 @@ const NFTSection = ({ nftRef, hiddenProp, roadmapRef }) => {
                 </Text>
                 <p className="text-base mt-1">1 man 1 vote will be adopted</p>
               </div>
-              <div className="w-[250px]">
+              <div className="w-full lg:w-[250px] mt-6 lg:mt-0">
                 <Text
                   bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
                   bgClip="text"
@@ -68,8 +89,8 @@ const NFTSection = ({ nftRef, hiddenProp, roadmapRef }) => {
                 </p>
               </div>
             </div>
-            <div className="text-[#D6D6D6] mt-6 flex justify-between">
-              <div className="w-[250px]">
+            <div className="text-[#D6D6D6] mt-6 flex flex-col lg:flex-row justify-between mx-5 lg:mx-0">
+              <div className="w-full lg:w-[250px]">
                 <Text
                   bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
                   bgClip="text"
@@ -82,7 +103,7 @@ const NFTSection = ({ nftRef, hiddenProp, roadmapRef }) => {
                   A place where holders can share about blockchains opportunity
                 </p>
               </div>
-              <div className="w-[250px]">
+              <div className="w-full lg:w-[250px] mt-6 lg:mt-0">
                 <Text
                   bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
                   bgClip="text"
@@ -104,7 +125,7 @@ const NFTSection = ({ nftRef, hiddenProp, roadmapRef }) => {
             >
               <div
                 hidden={hiddenProp}
-                className="mt-[40px] hover:scale-110 duration-500 w-fit"
+                className="mt-[40px] hover:scale-110 duration-500 w-fit mx-auto lg:mx-0"
               >
                 <ButtonCustom h="43px" w="193px" text="View More" />
               </div>

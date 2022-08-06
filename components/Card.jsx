@@ -79,11 +79,11 @@ const Card = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1920,
+        breakpoint: 980,
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 4,
+          slidesToShow: 3,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,
@@ -93,11 +93,11 @@ const Card = () => {
         },
       },
       {
-        breakpoint: 1500,
+        breakpoint: 700,
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 4,
+          slidesToShow: 2,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,
@@ -107,11 +107,11 @@ const Card = () => {
         },
       },
       {
-        breakpoint: 1280,
+        breakpoint: 500,
         settings: {
           dots: false,
           infinite: true,
-          slidesToShow: 4,
+          slidesToShow: 1,
           slidesToScroll: 1,
           autoplay: false,
           autoplaySpeed: 2000,

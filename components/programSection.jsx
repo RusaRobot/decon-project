@@ -7,25 +7,43 @@ const ProgramSection = ({ programRef }) => {
     <>
       <div
         ref={programRef}
-        className="flex-row w-full h-120% bg-[#202020] pb-[74px]"
+        className="flex-row w-full h-full bg-[#202020] pb-[74px]"
       >
-        <Text
-          bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
-          bgClip="text"
-          fontSize="60px"
-          fontWeight="bold"
-          w="fit-content"
-          h="fit-content"
-          mx="auto"
-          pt="40px"
-          pb="32px"
-        >
-          Programs
-        </Text>
+        <div className="hidden md:inline">
+          <Text
+            bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
+            bgClip="text"
+            fontSize="60px"
+            fontWeight="bold"
+            w="fit-content"
+            h="fit-content"
+            mx="auto"
+            pt="40px"
+            pb="32px"
+          >
+            Programs
+          </Text>
+        </div>
 
-        <div className="flex w-[1060px] h-[530px] mx-auto">
+        <div className="md:hidden">
+          <Text
+            bgGradient="linear(to-r, yellowPrimary, yellowSecondary, #F7F39F , yellowTertiary)"
+            bgClip="text"
+            fontSize="40px"
+            fontWeight="bold"
+            w="fit-content"
+            h="fit-content"
+            mx="auto"
+            pt="40px"
+            pb="32px"
+          >
+            Programs
+          </Text>
+        </div>
+
+        <div className="lg:flex lg:w-[1060px] lg:h-[530px] lg:mx-auto">
           {/* left item */}
-          <div className="rounded-2xl w-[530px]">
+          <div className="rounded-2xl w-[340px] mx-auto md:w-[530px]">
             <UISlider>
               <img
                 src="/1.png"
@@ -85,7 +103,7 @@ const ProgramSection = ({ programRef }) => {
             </UISlider>
           </div>
           {/* right item */}
-          <div className="w-[530px] text-white">
+          <div className="mt-[36px] mx-auto lg:mx-0 lg:mt-0 w-[90vw] lg:w-[530px] text-white">
             <div className="ml-8">
               <p className="font-bold text-2xl">
                 GET READY TO FACE THE DIGITALIZATION OF THE ECONOMY!
@@ -118,27 +136,28 @@ const ProgramSection = ({ programRef }) => {
                   Place: Auditorium R. Soeriaatmadja FEB UI
                 </p>
               </div>
-              <a 
-              target="_blank" 
-              href="https://www.youtube.com/c/MSSFEBUIchannel" 
-              rel="noopener noreferrer">
-                <div className="mt-12 w-fit">
+              <a
+                target="_blank"
+                href="https://www.youtube.com/c/MSSFEBUIchannel"
+                rel="noopener noreferrer"
+              >
+                <div className="mt-12 w-fit mx-auto md:mx-0">
                   <div className="hover:scale-110 duration-500">
                     <ButtonCustom text="Watch Now" w="193px" h="43px" />
-                  </div>                  
+                  </div>
                 </div>
               </a>
-              <a 
-              target="_blank" 
-              href="http://bit.ly/3Ntxbrv" 
-              rel="noopener noreferrer">                
-                <div className="flex-center align-center mt-[5px]">
-                  <button className=
-                    "flex-center align-center hover:bg-blue-700 rounded text-white text-[15px]">
-                  Learning materials download 
+              <a
+                target="_blank"
+                href="http://bit.ly/3Ntxbrv"
+                rel="noopener noreferrer"
+              >
+                <div className="flex-center text-center md:text-start align-center mt-[5px]">
+                  <button className="flex-center align-center hover:bg-blue-700 rounded text-white text-[15px]">
+                    Learning materials download
                   </button>
                 </div>
-              </a>                   
+              </a>
             </div>
           </div>
         </div>

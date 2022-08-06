@@ -3,7 +3,7 @@ import Image from "next/image";
 const FooterSection = () => {
   return (
     <div className="w-full h-[200px] bg-[#333533]">
-      <div className="flex justify-center mt-[80px]">
+      <div className="flex justify-center">
         <div className="flex flex-col items-center gap-6">
           <Image width="110px" height="46px" src="/DECON.svg" alt="" />
 
