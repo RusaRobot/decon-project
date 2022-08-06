@@ -59,6 +59,18 @@ const DeconSection = ({
     roadmapFunction();
     onCloseDrawer();
   };
+  const onCloseProgram = () => {
+    programFunction();
+    onCloseDrawer();
+  };
+  const onCloseActivity = () => {
+    activityFunction();
+    onCloseDrawer();
+  };
+  const onCloseNft = () => {
+    nftFunction();
+    onCloseDrawer();
+  };
 
   //Toast
   const toast = useToast();
@@ -288,10 +300,10 @@ const DeconSection = ({
         isOpenDrawer={isOpenDrawer}
         onCloseDrawer={onCloseDrawer}
         storyFunction={onCloseStory}
-        programFunction={programFunction}
-        nftFunction={nftFunction}
+        programFunction={onCloseProgram}
+        nftFunction={onCloseNft}
         roadmapFunction={onCloseRoadmap}
-        activityFunction={activityFunction}
+        activityFunction={onCloseActivity}
       />
     </div>
   );

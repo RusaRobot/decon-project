@@ -28,8 +28,8 @@ const DrawerDecon = ({
       onClose={onCloseDrawer}
     >
       <DrawerOverlay />
-      <DrawerContent>
-        <DrawerCloseButton />
+      <DrawerContent bgColor={"#202020"}>
+        <DrawerCloseButton color={"white"} />
         <DrawerHeader>
           <img
             className="w-[58px] h-[24px]"
@@ -41,23 +41,23 @@ const DrawerDecon = ({
 
         <DrawerBody>
           <div className="flex flex-col gap-7">
-            <Button onClick={storyFunction} bgColor="white">
+            <Button onClick={storyFunction} bgColor="#202020" color="white">
               Story
             </Button>
             <Divider />
-            <Button onClick={programFunction} bgColor="white">
+            <Button onClick={programFunction} bgColor="#202020" color="white">
               Program
             </Button>
             <Divider />
-            <Button onClick={activityFunction} bgColor="white">
+            <Button onClick={activityFunction} bgColor="#202020" color="white">
               Activity
             </Button>
             <Divider />
-            <Button onClick={nftFunction} bgColor="white">
+            <Button onClick={nftFunction} bgColor="#202020" color="white">
               NFT
             </Button>
             <Divider />
-            <Button onClick={roadmapFunction} bgColor="white">
+            <Button onClick={roadmapFunction} bgColor="#202020" color="white">
               Roadmap
             </Button>
           </div>
