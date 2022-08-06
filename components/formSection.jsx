@@ -23,25 +23,46 @@ const FormSection = () => {
         .required("Input email first!"),
       name: Yup.string().required("Input name first!"),
     }),
-    onSubmit: () => {},
+    onSubmit: async (values) => {
+      try {
+        setDisable(true);
+        toast({
+          description:
+            "Your name & email has been succesfully submitted! We will reach you soon",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+      } catch (error) {
+        console.log(error);
+        toast({
+          description: "Oops! Something's wrong",
+          status: "error",
+          duration: 5000,
+          isClosable: true,
+        });
+      } finally {
+        setDisable(false);
+      }
+    },
   });
 
-  const submitForm = () => {
-    try {
-      setDisable(true);
-      toast({
-        description:
-          "Your name & email has been succesfully submitted! We will reach you soon",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
-      });
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setDisable(false);
-    }
-  };
+  // const submitForm = () => {
+  //   try {
+  //     setDisable(true);
+  //     toast({
+  //       description:
+  //         "Your name & email has been succesfully submitted! We will reach you soon",
+  //       status: "success",
+  //       duration: 5000,
+  //       isClosable: true,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   } finally {
+  //     setDisable(false);
+  //   }
+  // };
 
   return (
     <div className="w-full h-[550px] lg:h-[626px] bg-[#333533] flex flex-col">
@@ -88,31 +109,30 @@ const FormSection = () => {
                 ) : null}
               </div>
             </div>
+
+            <div className="flex justify-center mt-10">
+              <div className="hover:scale-110 duration-500 hidden lg:inline">
+                <ButtonCustom
+                  text="Submit"
+                  w="203px"
+                  h="76px"
+                  size="32px"
+                  buttonType="submit"
+                  disabled={disable}
+                />
+              </div>
+              <div className="hover:scale-110 duration-500 lg:hidden">
+                <ButtonCustom
+                  text="Submit"
+                  w="150px"
+                  h="40px"
+                  size="16px"
+                  buttonType="submit"
+                  disabled={disable}
+                />
+              </div>
+            </div>
           </form>
-          <div className="flex justify-center mt-10">
-            <div className="hover:scale-110 duration-500 hidden lg:inline">
-              <ButtonCustom
-                text="Submit"
-                w="203px"
-                h="76px"
-                onClick={() => {
-                  submitForm();
-                }}
-                size="32px"
-              />
-            </div>
-            <div className="hover:scale-110 duration-500 lg:hidden">
-              <ButtonCustom
-                text="Submit"
-                w="150px"
-                h="40px"
-                onClick={() => {
-                  submitForm();
-                }}
-                size="16px"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>
