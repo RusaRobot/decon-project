@@ -149,7 +149,7 @@ const ProgramSection = ({ programRef }) => {
               </a>
               <a
                 target="_blank"
-                href="http://bit.ly/3Ntxbrv"
+                href="http://"
                 rel="noopener noreferrer"
               >
                 <div className="flex-center text-center md:text-start align-center mt-[5px]">
