@@ -1,6 +1,5 @@
-import ButtonCustom from "./buttonCustom";
-import Image from "next/image";
-import Link from "next/link";
+import ButtonCustom from "./buttonCustom"
+import Link from "next/link"
 import {
   useAddress,
   useMetamask,
@@ -9,22 +8,14 @@ import {
   useNetwork,
   useEditionDrop,
   useNFTBalance,
-} from "@thirdweb-dev/react";
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-  useDisclosure,
-  Button,
-} from "@chakra-ui/react";
-import { useToast } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import ModalLandingPage from "./ModalLandingPage";
-import ModalPositive from "./ModalPositive";
-import ModalNegative from "./ModalNegative";
-import { GiHamburgerMenu } from "react-icons/gi";
-import DrawerDecon from "./Drawer";
+} from "@thirdweb-dev/react"
+import { useDisclosure } from "@chakra-ui/react"
+import { useToast } from "@chakra-ui/react"
+import { useState, useEffect } from "react"
+import ModalPositive from "./ModalPositive"
+import ModalNegative from "./ModalNegative"
+import { GiHamburgerMenu } from "react-icons/gi"
+import DrawerDecon from "./Drawer"
 
 const DeconSection = ({
   storyFunction,
@@ -38,102 +29,102 @@ const DeconSection = ({
     isOpen: isOpenPositive,
     onOpen: onOpenPositive,
     onClose: onClosePositive,
-  } = useDisclosure();
+  } = useDisclosure()
   const {
     isOpen: isOpenNegative,
     onOpen: onOpenNegative,
     onClose: onCloseNegative,
-  } = useDisclosure();
+  } = useDisclosure()
   //Drawer
   const {
     isOpen: isOpenDrawer,
     onOpen: onOpenDrawer,
     onClose: onCloseDrawer,
-  } = useDisclosure();
+  } = useDisclosure()
   //Drawer Close onClick
   const onCloseStory = () => {
-    storyFunction();
-    onCloseDrawer();
-  };
+    storyFunction()
+    onCloseDrawer()
+  }
   const onCloseRoadmap = () => {
-    roadmapFunction();
-    onCloseDrawer();
-  };
+    roadmapFunction()
+    onCloseDrawer()
+  }
   const onCloseProgram = () => {
-    programFunction();
-    onCloseDrawer();
-  };
+    programFunction()
+    onCloseDrawer()
+  }
   const onCloseActivity = () => {
-    activityFunction();
-    onCloseDrawer();
-  };
+    activityFunction()
+    onCloseDrawer()
+  }
   const onCloseNft = () => {
-    nftFunction();
-    onCloseDrawer();
-  };
+    nftFunction()
+    onCloseDrawer()
+  }
 
   //Toast
-  const toast = useToast();
+  const toast = useToast()
 
   // allow user to connect to app with metamask, and obtain address
-  const address = useAddress();
-  const connectWithMetamask = useMetamask();
-  const networkMismatched = useNetworkMismatch();
-  const [, switchNetwork] = useNetwork(); // Switch network
+  const address = useAddress()
+  const connectWithMetamask = useMetamask()
+  const networkMismatched = useNetworkMismatch()
+  const [, switchNetwork] = useNetwork() // Switch network
 
   //Button Change
-  const [afterClick, setAfterClick] = useState(false);
+  const [afterClick, setAfterClick] = useState(false)
 
   // Replace this address with your NFT Drop address!
   const editionDrop = useEditionDrop(
     "0xCFAc3aE7CcA862473E7Fbcbe091d3aA7dfadcC3E"
-  );
-  const [isClaiming, setIsClaiming] = useState(false);
-  const { data: balance, isLoading } = useNFTBalance(editionDrop, address, "0");
+  )
+  const [isClaiming, setIsClaiming] = useState(false)
+  const { data: balance, isLoading } = useNFTBalance(editionDrop, address, "0")
 
   const mintNft = async () => {
     try {
       // If they don't have an connected wallet, ask them to connect!
       if (!address) {
-        await connectWithMetamask();
-        return;
+        await connectWithMetamask()
+        return
       }
 
       // Ensure they're on the right network (mumbai)
       if (networkMismatched) {
-        await switchNetwork(ChainId.Polygon);
-        return;
+        await switchNetwork(ChainId.Polygon)
+        return
       }
 
-      setIsClaiming(true);
-      await editionDrop.claim(0, 1);
+      setIsClaiming(true)
+      await editionDrop.claim(0, 1)
     } catch (error) {
-      console.error("Failed to mint NFT", error);
+      console.error("Failed to mint NFT", error)
     } finally {
-      setIsClaiming(false);
+      setIsClaiming(false)
     }
-  };
+  }
 
   //Truncate Address
   function truncateAddress(address) {
-    return `${address.slice(0, 6)}...${address.slice(-5)}`;
+    return `${address.slice(0, 6)}...${address.slice(-5)}`
   }
 
   const modalKebuka = async () => {
     try {
-      await connectWithMetamask();
-      setAfterClick(true);
+      await connectWithMetamask()
+      setAfterClick(true)
 
       if (balance > 0) {
-        return onOpenPositive();
+        return onOpenPositive()
       }
       if (balance <= 0) {
-        return onOpenNegative();
+        return onOpenNegative()
       }
     } catch (error) {
-      console.log(error);
+      console.log(error)
     }
-  };
+  }
 
   // if the user is connected and has an NFT from the drop, display text
   // if (balance > 0) {
@@ -306,7 +297,7 @@ const DeconSection = ({
         activityFunction={onCloseActivity}
       />
     </div>
-  );
-};
+  )
+}
 
-export default DeconSection;
+export default DeconSection

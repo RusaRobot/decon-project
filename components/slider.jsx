@@ -5,7 +5,7 @@ import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 
 const UISlider = (props) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  console.log(activeSlideIndex);
+  
 
   function NextArrow(props) {
     const { className, style, onClick } = props;

@@ -149,7 +149,7 @@ const ProgramSection = ({ programRef }) => {
               </a>
               <a
                 target="_blank"
-                href="http://"
+                href="https://drive.google.com/drive/folders/1Ds2fUFSEdJLSMDV9bhzb85YY2OHD4Wjj?usp=sharing"
                 rel="noopener noreferrer"
               >
                 <div className="flex-center text-center md:text-start align-center mt-[5px]">
